@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10101d">
+  <title>Hogwarts Memory Challenge</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="starfield" aria-hidden="true"></div>
+  <main class="game-shell">
+    <header class="hero">
+      <p class="eyebrow">A WIZARDING MEMORY CHALLENGE</p>
+      <h1>Hogwarts <span>Memory</span></h1>
+      <p class="subtitle">Watch the magical pattern. Then repeat it in the right order.</p>
+    </header>
+
+    <section class="game-card" aria-label="Pattern memory game">
+      <div class="stats" aria-label="Game statistics">
+        <div class="stat"><span class="stat-label">LEVEL</span><strong id="level">—</strong></div>
+        <div class="stat"><span class="stat-label">SCORE</span><strong id="score">0</strong></div>
+        <div class="stat"><span class="stat-label">BEST</span><strong id="best-score">0</strong></div>
+      </div>
+
+      <div class="status-panel">
+        <span class="status-mark" aria-hidden="true">✦</span>
+        <p id="status" role="status" aria-live="polite">Your lesson is ready. Press Begin!</p>
+        <p class="progress" id="progress">Sequence: 0 / 0</p>
+      </div>
+
+      <div class="magic-board" aria-label="Four magical house buttons">
+        <button class="magic-pad gryffindor" data-pad="gryffindor" aria-label="Gryffindor, red and gold">
+          <span class="pad-crest" aria-hidden="true">🦁</span>
+          <span class="pad-name">Gryffindor</span>
+          <span class="pad-motto">Courage</span>
+        </button>
+        <button class="magic-pad slytherin" data-pad="slytherin" aria-label="Slytherin, green and silver">
+          <span class="pad-crest" aria-hidden="true">🐍</span>
+          <span class="pad-name">Slytherin</span>
+          <span class="pad-motto">Ambition</span>
+        </button>
+        <button class="magic-pad ravenclaw" data-pad="ravenclaw" aria-label="Ravenclaw, blue and bronze">
+          <span class="pad-crest" aria-hidden="true">🦅</span>
+          <span class="pad-name">Ravenclaw</span>
+          <span class="pad-motto">Wisdom</span>
+        </button>
+        <button class="magic-pad hufflepuff" data-pad="hufflepuff" aria-label="Hufflepuff, yellow and black">
+          <span class="pad-crest" aria-hidden="true">🦡</span>
+          <span class="pad-name">Hufflepuff</span>
+          <span class="pad-motto">Loyalty</span>
+        </button>
+      </div>
+
+      <div class="controls">
+        <button id="start-button" class="primary-button">✦ Begin Lesson</button>
+        <button id="sound-button" class="secondary-button" type="button" aria-pressed="true">♫ Sound: On</button>
+      </div>
+      <p class="hint">Tip: Watch carefully while the lights play. Your turn begins when the message changes.</p>
+    </section>
+    <footer>Made for curious minds at Hogwarts • No downloads or external libraries needed</footer>
+  </main>
+</body>
+</html>
